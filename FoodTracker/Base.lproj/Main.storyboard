@@ -84,16 +84,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imagee" destination="bKa-xi-a4t" id="hQw-Y8-xOZ"/>
                         <outlet property="mealNameLabel" destination="6Cb-7z-bO6" id="GPh-1g-old"/>
-                        <outlet property="nameTextFiled" destination="Czy-s8-ege" id="odk-M5-ChC"/>
+                        <outlet property="nameTextField" destination="Czy-s8-ege" id="7US-nH-eZv"/>
+                        <outlet property="photoImageView" destination="bKa-xi-a4t" id="Hsp-ns-v1u"/>
                         <outlet property="submitButton" destination="U28-rB-Shx" id="1WA-2H-6Dn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cfW-PU-EWV">
                     <connections>
-                        <action selector="lola:" destination="BYZ-38-t0r" id="jOB-ap-x9a"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="eUm-Ci-9Hd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
