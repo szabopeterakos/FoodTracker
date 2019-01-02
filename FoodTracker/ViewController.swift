@@ -8,13 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var mealNameLabel: UILabel!
+    @IBOutlet weak var nameTextFiled: UITextField! //IB= interface builder
+    @IBOutlet weak var submitButton: UIButton!
+    // MARK: Initialize
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        nameTextFiled.delegate = self // self == this , delegate calbacks
+        submitButton.layer.cornerRadius = mealNameLabel.frame.height / 11
     }
-
-
+    
+    // MARK: Actions
+    @IBAction func setDefaultLabelText(_ sender: UIButton) {
+        mealNameLabel.text = "funny things..."
+        
+    }
+    
+    //MARK: UITextFieldDelegate
+    
+    
 }
 
