@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var nameTextField: UITextField! //IB= interface builder
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var photoImageView: UIImageView!
+    
+    
     // MARK: Initialize
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         mealNameLabel.text = "funny button..."
     }
     
-    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    @IBAction func selectImageFromGalery(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
         nameTextField.resignFirstResponder()
         
@@ -39,6 +41,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+        print("ok")
+    }
+    
+    @IBAction func labelChecker(_ sender: UITapGestureRecognizer) {
+        print("niceeee...")
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -50,9 +57,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
+        let selectedImage = info[.originalImage] as? UIImage
         
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
