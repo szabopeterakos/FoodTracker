@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextFiled: UITextField! //IB= interface builder
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var photoImageView: UIImageView!
     // MARK: Initialize
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    }
+    
     //MARK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
     
-    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        mealNameLabel.text = textField.text
+    }
 }
 
