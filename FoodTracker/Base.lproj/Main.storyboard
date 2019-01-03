@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="eX8-cu-sPW">
-                                <rect key="frame" x="16" y="36" width="343" height="589"/>
+                                <rect key="frame" x="16" y="42" width="343" height="671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meal name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-7z-bO6">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
@@ -57,8 +57,14 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZiQ-7h-mKd"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IUM-Zt-LKL" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="246" width="343" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Vnf-cW-CmL"/>
+                                        </constraints>
+                                    </stackView>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="300" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-xi-a4t">
-                                        <rect key="frame" x="0.0" y="246" width="343" height="343"/>
+                                        <rect key="frame" x="0.0" y="328" width="343" height="343"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bKa-xi-a4t" secondAttribute="height" multiplier="1:1" id="nKZ-Nd-8bf"/>
@@ -70,7 +76,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="U28-rB-Shx" firstAttribute="top" secondItem="Czy-s8-ege" secondAttribute="bottom" constant="22" id="bwj-1p-mA7"/>
-                                    <constraint firstItem="Czy-s8-ege" firstAttribute="top" secondItem="6Cb-7z-bO6" secondAttribute="bottom" constant="66" id="cN5-3o-CVU"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -80,7 +85,7 @@
                             <constraint firstItem="eX8-cu-sPW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ATB-Gz-h5w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eX8-cu-sPW" secondAttribute="trailing" constant="16" id="BPd-GX-G9O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eX8-cu-sPW" secondAttribute="trailing" constant="16" id="K4q-SB-uBv"/>
-                            <constraint firstItem="eX8-cu-sPW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ull-RK-WYw"/>
+                            <constraint firstItem="eX8-cu-sPW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ull-RK-WYw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

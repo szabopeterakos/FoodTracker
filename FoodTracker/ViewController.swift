@@ -48,7 +48,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         // The info dictionary may contain multiple representations of the image. You want to use the original.
         let selectedImage = info[.originalImage] as? UIImage
         
