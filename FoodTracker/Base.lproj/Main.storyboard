@@ -31,9 +31,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="ZFX-eX-hMv" appends="YES" id="r7p-OC-0gw"/>
-                                        </connections>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter something funny here ..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czy-s8-ege">
                                         <rect key="frame" x="0.0" y="82" width="343" height="60"/>
@@ -98,11 +95,6 @@
                 <tapGestureRecognizer id="KIZ-gx-8gd">
                     <connections>
                         <action selector="selectImageFromGalery:" destination="BYZ-38-t0r" id="5XK-i8-PAi"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="ZFX-eX-hMv">
-                    <connections>
-                        <action selector="labelChecker:" destination="BYZ-38-t0r" id="IAO-4B-2EY"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

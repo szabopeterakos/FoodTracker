@@ -15,8 +15,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var photoImageView: UIImageView!
     
-    
-    // MARK: Initialize
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self // self == this , delegate calbacks
@@ -41,11 +39,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
-        print("ok")
-    }
-    
-    @IBAction func labelChecker(_ sender: UITapGestureRecognizer) {
-        print("niceeee...")
     }
     
     //MARK: UIImagePickerControllerDelegate
