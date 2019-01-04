@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="eX8-cu-sPW">
-                                <rect key="frame" x="61" y="51" width="252" height="564"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="eX8-cu-sPW">
+                                <rect key="frame" x="37" y="68" width="300" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meal name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-7z-bO6">
-                                        <rect key="frame" x="0.0" y="0.0" width="252" height="60"/>
+                                        <rect key="frame" x="57" y="0.0" width="186.5" height="60"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="ei0-fw-qlh"/>
@@ -34,7 +34,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter something funny here ..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czy-s8-ege">
-                                        <rect key="frame" x="0.0" y="82" width="252" height="60"/>
+                                        <rect key="frame" x="10.5" y="82" width="279.5" height="60"/>
                                         <color key="backgroundColor" name="Color"/>
                                         <color key="tintColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -44,26 +44,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U28-rB-Shx">
-                                        <rect key="frame" x="0.0" y="164" width="252" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Nih-cz-zx3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="send">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZiQ-7h-mKd"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IUM-Zt-LKL" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="246" width="252" height="44"/>
+                                        <rect key="frame" x="24" y="164" width="252" height="44"/>
                                         <color key="backgroundColor" name="Color"/>
                                     </stackView>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="300" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-xi-a4t">
-                                        <rect key="frame" x="0.0" y="312" width="252" height="252"/>
+                                        <rect key="frame" x="0.0" y="230" width="300" height="300"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bKa-xi-a4t" secondAttribute="height" multiplier="1:1" id="nKZ-Nd-8bf"/>
@@ -73,9 +59,6 @@
                                         </connections>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="U28-rB-Shx" firstAttribute="top" secondItem="Czy-s8-ege" secondAttribute="bottom" constant="22" id="bwj-1p-mA7"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -86,7 +69,7 @@
                         <outlet property="mealNameLabel" destination="6Cb-7z-bO6" id="GPh-1g-old"/>
                         <outlet property="nameTextField" destination="Czy-s8-ege" id="7US-nH-eZv"/>
                         <outlet property="photoImageView" destination="bKa-xi-a4t" id="zHp-GN-Fer"/>
-                        <outlet property="submitButton" destination="U28-rB-Shx" id="1WA-2H-6Dn"/>
+                        <outlet property="ratingControl" destination="IUM-Zt-LKL" id="Cjx-VM-K40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

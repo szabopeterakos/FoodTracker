@@ -12,20 +12,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField! //IB= interface builder
-    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self // self == this , delegate calbacks
-        submitButton.layer.cornerRadius = mealNameLabel.frame.height / 11
     }
     
     // MARK: Actions
-    @IBAction func setDefaultLabelText(_ sender: UIButton) {
-        mealNameLabel.text = "funny button..."
-    }
-    
     @IBAction func selectImageFromGalery(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
         nameTextField.resignFirstResponder()
